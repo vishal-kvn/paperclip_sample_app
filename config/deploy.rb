@@ -13,7 +13,7 @@ set :repository,  "."
 
 #default_run_options[:pty] = true
 
-set :location, "ec2-107-21-164-101.compute-1.amazonaws.com"
+set :location, "ec2-50-19-48-132.compute-1.amazonaws.com"
 
 role :web, location                          # Your HTTP server, Apache/etc
 role :app, location                          # This may be the same as your `Web` server
@@ -71,3 +71,12 @@ ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa")]
 #ssh -i key1.pem ubuntu@ec2-107-21-164-101.compute-1.amazonaws.com
 
 #cat ~/.ssh/id_rsa.pub | ssh -i key1.pem ubuntu@ec2-107-21-164-101.compute-1.amazonaws.com ‘cat >> .ssh/authorized_keys’
+
+# <VirtualHost *:80>
+#       ServerName www.vi-shal.com
+#       DocumentRoot /var/www/apps/paperclip_sample_app/public
+#       <Directory /var/www/apps/paperclip_sample_app/public>
+#          AllowOverride all         
+#          Options -MultiViews        
+#       </Directory>
+#    </VirtualHost>
