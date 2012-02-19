@@ -17,6 +17,5 @@ development:
   encoding: utf8
   database: paperclip_sample_app_development
   reconnect: false
-  socket: /var/run/mysqld/mysqld.sock
   pool: 5
   username: root
