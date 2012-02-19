@@ -13,7 +13,7 @@ set :repository,  "."
 
 #default_run_options[:pty] = true
 
-set :location, "ec2-50-19-48-132.compute-1.amazonaws.com"
+set :location, "23.21.232.201"
 
 role :web, location                          # Your HTTP server, Apache/etc
 role :app, location                          # This may be the same as your `Web` server
