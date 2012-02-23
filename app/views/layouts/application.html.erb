@@ -5,8 +5,26 @@
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+
+<meta property="og:title" content="paperclip" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://vi-shal.com/" />
+<meta property="og:image" content="http://vi-shal.com/system/avatars/5/thumb/thumb-Tom-Jerry-TripleChase.jpg" />
+<meta property="og:site_name" content="vi" />
+<meta property="fb:admins" content="1253641195" />
+<meta property="fb:app_id" content="215370408560280" />
+
 </head>
 <body>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=215370408560280";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
 <%= yield %>
 
